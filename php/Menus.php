@@ -40,8 +40,6 @@
     }else if($_SESSION["tipo"]==3){
       echo "<span id='inicio'><a id='ini' href='Layout.php'>Inicio</a></span>";
       // echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php?logInMail=$logInMail'>Insertar pregunta</a></span>";
-      echo "<span id='insertarAjax'><a id='ins' href='HandlingQuizesAjax.php'>Gestionar preguntas</a></span>";
-      echo "<span id='obtenerPregunta'><a id='ins' href='ClientGetQuestion.php'>Optener pregunta</a></span>";
       echo "<span id='gestionUsuarios'><a id='gestion' href='HandlingAccounts.php'>Gestionar Usuarios</a></span>";
       echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
       // echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php?logInMail=$logInMail'> Ver preguntas BD </a> </span>";
