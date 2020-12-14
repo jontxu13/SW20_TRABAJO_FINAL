@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItems>
+  <assessmentItem subject="Web" author="jvadillo001@ikasle.ehu.eus">
+    <itemBody>
+      <p>Tag HTML para añadir un formulario</p>
+    </itemBody>
+    <correctResponse>
+      <response>
+				FORM
+			</response>
+    </correctResponse>
+    <incorrectResponses>
+      <response> OBJECT </response>
+      <response> TABLE </response>
+      <response> DIV </response>
+    </incorrectResponses>
+  </assessmentItem>
+  <assessmentItem subject="Internet" author="rarruabarrena001@ikasle.ehu.eus">
+    <itemBody>
+      <p>Este protocolo acabará funcionando
+			incluso entre dos latas unidas por un cordón</p>
+    </itemBody>
+    <correctResponse>
+      <response>
+				TCP/IP
+			</response>
+    </correctResponse>
+    <incorrectResponses>
+      <response> HTTP </response>
+      <response> SMTP </response>
+      <response> Ninguna es correcta </response>
+    </incorrectResponses>
+  </assessmentItem>
+  <assessmentItem subject="tes tema" author="jdasilva002@ikasle.ehu.eus">
+    <itemBody>
+      <p>test enunciado</p>
+    </itemBody>
+    <correctResponse>
+      <response>test correcta</response>
+    </correctResponse>
+    <incorrectResponse>
+      <response>test incor1</response>
+      <response>test incor2</response>
+      <response>test incor3</response>
+    </incorrectResponse>
+  </assessmentItem>
+  <assessmentItem subject="test tema" author="jdasilva002@ikasle.ehu.eus">
+    <itemBody>
+      <p>test enunciado</p>
+    </itemBody>
+    <correctResponse>
+      <response>test correcta</response>
+    </correctResponse>
+    <incorrectResponse>
+      <response>test incor1</response>
+      <response>test incor1</response>
+      <response>test incor3</response>
+    </incorrectResponse>
+  </assessmentItem>
+</assessmentItems>
