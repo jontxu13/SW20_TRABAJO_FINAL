@@ -101,7 +101,7 @@
               $sql2 = "INSERT INTO recuperacioncontraseña(Email, código) VALUES ('$email', $codigo);";
               mysqli_query($link, $sql2);
 
-              echo"<script>alert(Email enviado correctamente.)</script>";
+              echo"<script>alert(Email enviado correctamente.); document.location.href='LogIn.php';</script>";
 
         } else {
           echo "<p class=\"error\">Usuario no existente!<p><br/>";
