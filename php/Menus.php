@@ -25,6 +25,7 @@
   if(!isset($_SESSION["tipo"])) {
     echo "<span id='inicio'><a id='ini' href='Layout.php'>Inicio</a></span>";
     echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
+    echo "<span id='modcon'> <a id='cre' href='recuperarContrasena.php'> Modificación de contraseña</a> </span>";
     echo "<script> showOnNotLogIn(); </script>";
 } else {
     if($_SESSION["tipo"]==1){

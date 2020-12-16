@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <html>
 
 <head>
@@ -35,7 +32,7 @@ session_start();
   <?php include '../php/DbConfig.php' ?>
   <section class="main" id="s1">
     <div>
-      <form id="flogin" name="flogin" method="POST" enctype="multipart/form-data" action="LogIn.php">
+      <form id="flogin" name="flogin" method="POST" enctype="multipart/form-data" action="recuperarContraseña.php">
         <table class="table_flogin">
           <tr>
             <th>
@@ -58,7 +55,6 @@ session_start();
       <?php
       if (isset($_REQUEST['dirCorreo'])) {
         $email = test_input($_REQUEST['dirCorreo']);
-        $pass1 = test_input($_REQUEST['pass1']);
         $mysqli = mysqli_connect($server, $user, $pass, $basededatos);
         if (!$mysqli) {
           die("Fallo al conectar con Mysql: " . mysqli_connect_error());
@@ -74,10 +70,6 @@ session_start();
         if (!empty($row) && $row['email'] == $email) {
           // echo "<p class=\"success\">Inicio de sesion realizado correctamente<p><br/>";
           // echo "<span><a href='Layout.php'>Ir al inicio</a></span>";
-          if ($row['estado'] == 0) {
-            echo "<p class=\"error\">Usuario bloqueado, consulte con un administrador.<p><br/>";
-          }else{
-              $from = "quizsw20@gmail.com";
               $to = $email;
               $subject =  "Recuperación contraseña";
               $codigo = rand(10000, 99999);
@@ -106,9 +98,11 @@ session_start();
 
               mail($to, $subject, $message, $headers);
 
+              $sql2 = "INSERT INTO recuperacioncontraseña(Email, código) VALUES ('$email', $codigo);";
+              mysqli_query($link, $sql2);
+
               echo"<script>alert(Email enviado correctamente.)</script>";
 
-          }
         } else {
           echo "<p class=\"error\">Usuario no existente!<p><br/>";
           // echo "<span><a href=\"javascript:history.back()\">Volver</a></span>";
